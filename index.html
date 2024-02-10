@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como me enamoré de ti</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            /* Establece la imagen de fondo y la ajusta al tamaño de la pantalla */
+            background: url('img/TUpu.jpg') no-repeat center center fixed;
+            background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+            /* Esto asegura que el contenido esté centrado vertical y horizontalmente */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            /* Asegura que el contenido no se extienda más allá del viewport */
+            height: 100vh;
+            margin: 0;
+            color: rgb(0, 0, 0);
+        }
+
+        h1 {
+            font-size: 100px;
+        }
+
+        p {
+            font-size: 50px;
+        }
+
+        #myImage {
+            transition: opacity 1s ease-in-out;
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Como me enamoré de ti</h1>
+        <img id="myImage">
+        <p>En este día tan especial, quiero recordarte lo mucho que significas para mí. Cada momento a tu lado es una bendición, y cada sonrisa tuya ilumina mi mundo. Gracias por ser la persona maravillosa que eres. Te amo más de lo que las palabras pueden expresar. ¡Feliz San Valentín, mi amor!</p>
+    </div>
+    <!-- Bootstrap JS y dependencias opcionales -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script>
+        var images = ['img/image.jpg', 'img/piolin2.jpg', 'img/piolin1.jpg']; // Agrega aquí las rutas a tus imágenes
+        var index = 0;
+        setInterval(function () {
+            var img = document.getElementById('myImage');
+            img.style.opacity = 0;
+            setTimeout(function () {
+                img.src = images[index];
+                img.style.opacity = 1;
+                index = (index + 1) % images.length;
+            }, 1000);
+        }, 5000);
+    </script>
+</body>
+</html>
